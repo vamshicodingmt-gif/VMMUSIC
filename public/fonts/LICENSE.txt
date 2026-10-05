@@ -1,0 +1,5 @@
+Inter — Copyright (c) 2016 The Inter Project Authors. SIL Open Font License 1.1.
+Playfair Display — Copyright (c) 2017 The Playfair Display Project Authors. SIL Open Font License 1.1.
+
+Both families are licensed under the SIL Open Font License, Version 1.1.
+Full licence text: https://openfontlicense.org

@@ -1,0 +1,39 @@
+{
+  "name": "VM Music Factory — Recording Studio, Bengaluru",
+  "short_name": "VM Music Factory",
+  "description": "Music recording, film dubbing, karaoke, background score, mixing and mastering studio in RR Nagar, Bengaluru, Karnataka. Open 24 hours.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0a0d",
+  "theme_color": "#0b0b0f",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["music", "business", "entertainment"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
