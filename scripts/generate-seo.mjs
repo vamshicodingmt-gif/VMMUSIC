@@ -58,6 +58,13 @@ Allow: /
 # Only the error page is kept out of the index (it also sends noindex, follow).
 Disallow: /404.html
 
+# Belt-and-braces: if a host is mis-configured and publishes the repository
+# root instead of dist/, keep the source folders out of search results.
+Disallow: /src/
+Disallow: /scripts/
+Disallow: /dist/
+Disallow: /node_modules/
+
 # Crawl-friendly: no crawl-delay, so Googlebot can fetch the whole site quickly.
 Sitemap: ${SITE_URL}/sitemap.xml
 Host: ${SITE_URL}
