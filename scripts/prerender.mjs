@@ -11,6 +11,9 @@
  *     works on Vercel (cleanUrls) as well as on any plain static host,
  *   • writes a noindex `dist/404.html`.
  *
+ * The SSR bundle it imports is built into `node_modules/.cache/vmmf-ssr`, so
+ * `dist/` contains nothing but the public site.
+ *
  * Result: real HTML on the first byte for users and crawlers, while the client
  * React app hydrates on top and takes over navigation.
  */
@@ -23,7 +26,7 @@ import { ROUTES } from '../src/data/routes.js';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const dist = join(root, 'dist');
-const serverEntry = join(dist, 'server', 'entry-server.js');
+const serverEntry = join(root, 'node_modules', '.cache', 'vmmf-ssr', 'entry-server.js');
 
 const escapeAttr = (value = '') =>
   String(value)

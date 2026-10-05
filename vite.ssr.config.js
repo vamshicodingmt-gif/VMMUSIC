@@ -16,7 +16,7 @@ export default defineConfig({
   publicDir: false,
   build: {
     ssr: 'src/entry-server.jsx',
-    outDir: 'dist/server',
+    outDir: 'node_modules/.cache/vmmf-ssr',
     emptyOutDir: true,
     minify: false,
     sourcemap: false,
