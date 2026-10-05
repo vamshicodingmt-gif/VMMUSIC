@@ -138,6 +138,9 @@ no analytics, no icon fonts, no UI framework.
 
 | Symptom | Fix |
 | --- | --- |
+| **Blank page or `404: NOT_FOUND`** on the deployment URL | The project was created while the repo was empty, so Vercel stored `Framework Preset: Other` and is publishing the wrong folder. Either set **Settings → Build & Development Settings → Output Directory** to `dist` and redeploy, or do nothing — `scripts/vercel-fallback.mjs` already copies the built site to every directory Vercel might publish, so the site loads regardless. Verify with `…/robots.txt`: if that loads but `/about` 404s, the output directory is the culprit. |
+| `sh: 1: vite: not found` in the build log | The install skipped devDependencies. Already handled: `vite`/`@vitejs/plugin-react` are production dependencies and `vercel.json` sets `installCommand: "npm install --include=dev"`. |
+| Node version error during install | **Settings → General → Node.js Version** → `22.x` (Vite 8 requires Node ≥ 20.19 / ≥ 22.12). |
 | Vercel builds but shows an empty page | Check the build log ends with `[prerender] done`; if not, run `npm run build` locally and fix the reported error. |
 | A route 404s on Vercel | Make sure the file exists in `dist/` (e.g. `dist/about/index.html`) and that `cleanUrls` is still `true`. |
 | Canonical tags point at `*.vercel.app` | Update `site.domain` and redeploy. |

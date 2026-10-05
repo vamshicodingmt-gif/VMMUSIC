@@ -102,7 +102,14 @@ all follow that file automatically.
 2. On [vercel.com](https://vercel.com) → **Add New → Project** → import the repo.
 3. Vercel reads `vercel.json`: `npm run build`, output `dist/`, framework Vite —
    **no further settings required**.
-4. Add your custom domain in *Project → Settings → Domains*. Vercel issues the
+4. **If the deployed page is blank or shows `404: NOT_FOUND`** (this happens when
+   a project was created while the repo was still empty, so Vercel saved
+   `Framework Preset: Other` and publishes the repo root instead of `dist/`),
+   either set **Settings → Build & Development Settings → Output Directory** to
+   `dist`, or simply leave it — `scripts/vercel-fallback.mjs` runs inside every
+   Vercel build and copies the finished site to every directory Vercel might be
+   publishing, so the site loads either way.
+5. Add your custom domain in *Project → Settings → Domains*. Vercel issues the
    TLS certificate automatically and redirects HTTP → HTTPS. Then update
    `site.domain` in `src/data/site.js` and redeploy so the canonical tags,
    sitemap and OG URLs match the live domain.
