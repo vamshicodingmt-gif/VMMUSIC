@@ -26,7 +26,7 @@ export default function Media({
   priority = false,
   className = '',
   placeholderLabel = 'Image slot',
-  placeholderHint = 'Add the studio photo link in src/data/images.js',
+  placeholderHint = 'Studio photo coming soon.',
   figure = true,
   children,
 }) {

@@ -88,7 +88,7 @@ export default function Home() {
               caption={aboutImage.caption}
               priority
               placeholderLabel="About-us photo"
-              placeholderHint="Paste the studio photo link in src/data/images.js → aboutImage"
+              placeholderHint="Studio photo coming soon — the layout is already in place."
             />
           </div>
         </div>

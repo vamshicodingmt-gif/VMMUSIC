@@ -104,12 +104,12 @@ export function GalleryGrid({ images = [], idPrefix = 'gallery' }) {
                 <Media
                   alt={image.alt}
                   ratio="4x3"
-                  placeholderLabel={image.caption || 'Image slot'}
-                  placeholderHint="Add the photo in src/data/images.js"
+                  placeholderLabel={image.caption || 'Studio photo'}
+                  placeholderHint="Studio photo coming soon — the slot is ready."
                   figure={false}
                 />
               )}
-              <figcaption>{image.caption || image.alt}</figcaption>
+              {image.src && <figcaption>{image.caption || image.alt}</figcaption>}
             </figure>
           );
         })}
@@ -175,8 +175,8 @@ export function ReviewPhotoStrip({ images = [], title }) {
             ) : (
               <div className="media-placeholder" role="img" aria-label={image.alt}>
                 <GoogleIcon size={22} />
-                <strong>{image.caption || 'Review image slot'}</strong>
-                <span>Add a screenshot or session photo in src/data/images.js</span>
+                <strong>{image.caption || 'Review image'}</strong>
+                <span>Reserved slot — the screenshot or session photo goes here.</span>
               </div>
             )}
           </figure>
@@ -184,8 +184,8 @@ export function ReviewPhotoStrip({ images = [], title }) {
       </div>
       {!hasAny && (
         <p className="form-note">
-          These are reserved slots for review screenshots and session photos — drop the images in and
-          they appear here automatically.
+          Reserved slots for Google review screenshots and session photos — they fill in
+          automatically once the images are added.
         </p>
       )}
     </div>
