@@ -1,0 +1,34 @@
+{
+  "name": "vm-music-factory",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Official website for VM Music Factory \u2014 professional music recording, dubbing, karaoke, mixing and mastering studio in RR Nagar, Bengaluru, Karnataka.",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "postinstall": "node scripts/sync-fonts.mjs",
+    "dev": "vite",
+    "build": "node scripts/sync-fonts.mjs && node scripts/generate-seo.mjs && vite build && vite build --config vite.ssr.config.js && node scripts/prerender.mjs && node scripts/audit.mjs",
+    "build:client": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "audit": "node scripts/audit.mjs --strict",
+    "test:smoke": "node scripts/smoke-test.mjs",
+    "fonts": "node scripts/sync-fonts.mjs",
+    "seo": "node scripts/generate-seo.mjs",
+    "prerender": "node scripts/prerender.mjs",
+    "vercel-build": "npm run build"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/playfair-display": "^5.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "vite": "^8.3.2"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.2"
+  }
+}

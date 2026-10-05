@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!--
+      ===================================================================
+      PRIMARY SEO TAGS
+      The values here are the production defaults (home page). They are
+      re-written per route at build time by `scripts/prerender.mjs` and at
+      runtime by <Seo /> — both read `src/data/seo.js`.
+      ===================================================================
+    -->
+    <!-- seo:start — replaced per route by scripts/prerender.mjs -->
+    <title>VM Music Factory | Recording Studio in Bengaluru | Dubbing, Karaoke &amp; Music Production</title>
+    <meta
+      name="description"
+      content="VM Music Factory is a professional recording studio in RR Nagar, Bengaluru for song recording, film dubbing, karaoke, background score, mixing and mastering. Open 24 hours. Call or WhatsApp +91 95133 45544."
+    />
+    <link rel="canonical" href="https://vm-music-factory.vercel.app/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="VM Music Factory" />
+    <meta
+      name="keywords"
+      content="recording studio in Bengaluru, music recording studio Bangalore, dubbing studio RR Nagar, karaoke studio Bengaluru, mixing and mastering studio Bangalore, background score music production"
+    />
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="geo.region" content="IN-KA" />
+    <meta name="geo.placename" content="Bengaluru, Karnataka" />
+    <meta name="language" content="en-IN" />
+    <meta name="rating" content="general" />
+
+    <!-- TODO: paste the verification content from Google Search Console (HTML tag method). -->
+    <!-- <meta name="google-site-verification" content="YOUR_SEARCH_CONSOLE_CODE" /> -->
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VM Music Factory" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content="VM Music Factory | Recording Studio in Bengaluru" />
+    <meta
+      property="og:description"
+      content="Song recording, film dubbing, karaoke, background score, mixing and mastering in RR Nagar, Bengaluru. Open 24 hours. Call or WhatsApp +91 95133 45544."
+    />
+    <meta property="og:url" content="https://vm-music-factory.vercel.app/" />
+    <meta property="og:image" content="https://vm-music-factory.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="VM Music Factory — recording studio in Bengaluru, Karnataka" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VM Music Factory | Recording Studio in Bengaluru" />
+    <meta
+      name="twitter:description"
+      content="Song recording, film dubbing, karaoke, background score, mixing and mastering in RR Nagar, Bengaluru. Open 24 hours."
+    />
+    <meta name="twitter:image" content="https://vm-music-factory.vercel.app/og-image.png" />
+    <!-- seo:end -->
+
+    <!-- Icons & PWA manifest -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Performance: warm up the two third-party origins we actually use -->
+    <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+
+    <!-- Performance: the two font files are the only render-blocking assets -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin-wght-normal.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-latin-wght-normal.woff2" crossorigin />
+
+    <!--
+      Marks the document as JavaScript-capable. Scroll-reveal animations are
+      scoped to `html.js`, so with JS disabled every section stays visible.
+      Inline + tiny on purpose: it must run before the first paint.
+    -->
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div id="root"><!--app-html--></div>
+    <noscript>
+      <div style="max-width:42rem;margin:3rem auto;padding:1.5rem;font-family:system-ui;color:#eee;background:#0b0b0f;border-radius:12px">
+        <p style="font-size:1.25rem;font-weight:700;margin:0 0 .5rem;color:#f5f3ef">
+          VM Music Factory — Recording Studio in Bengaluru
+        </p>
+        <p style="margin:0 0 .75rem">
+          Music recording, film dubbing, karaoke, background score, mixing and mastering in RR Nagar, Bengaluru, Karnataka.
+          Open 24 hours, all seven days.
+        </p>
+        <p style="margin:0">
+          Call or WhatsApp <a style="color:#e8c37a" href="tel:+919513345544">+91 95133 45544</a> to book a session.
+        </p>
+      </div>
+    </noscript>
+  </body>
+</html>
